@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas — GTA VI 55-Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: roadmap, missable flags, cited guides, checklist saved in your browser.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; works offline</p>
+    <h1>Leonida Trophy Atlas</h1>
+    <p class="subtitle">The full 55 — every official name, description and grade, a guide written in our own words with its sources, and a checklist that keeps your progress in this browser.</p>
+    <div class="progress" id="progress" aria-live="polite">
+      <div class="progress-numbers"><span id="earned-count">0</span><span class="of"> / 55 earned</span><span id="earned-pct" class="pct">0%</span></div>
+      <div class="bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progress-bar"><div class="bar-fill" id="progress-fill"></div></div>
+      <div class="grade-counts" id="grade-counts"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="missable" id="missable-banner" aria-label="Missable trophy warning">
+    <strong>&#9888; One trophy can be missed.</strong>
+    <span><b>Positive Mental Attitude</b> — meditate at all 18 spots. After the Chapter 1 mission <i>Down to Earth</i>, follow Lucia to the balcony at Jason&rsquo;s house and meditate there. That session only exists in Chapter 1. The full guide sits below, under Collectibles.</span>
+    <button type="button" id="missable-jump">Show it</button>
+  </section>
+
+  <section class="toolbar" aria-label="Tracker controls">
+    <div class="toolbar-row">
+      <label class="search"><span class="visually-hidden">Search trophies</span><input type="search" id="search" placeholder="Search name, description or guide&hellip;" autocomplete="off"></label>
+      <label class="select">Grade
+        <select id="grade-filter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="select">Show
+        <select id="status-filter">
+          <option value="all">All trophies</option>
+          <option value="remaining">Not earned yet</option>
+          <option value="earned">Earned</option>
+        </select>
+      </label>
+      <label class="spoiler"><input type="checkbox" id="spoiler-toggle" checked> Hide story spoilers</label>
+    </div>
+    <div class="toolbar-row chips" id="kind-chips" role="group" aria-label="Filter by kind"></div>
+    <div class="toolbar-row actions">
+      <span id="result-count" class="result-count"></span>
+      <span class="spacer"></span>
+      <button type="button" id="export-btn">Export progress</button>
+      <button type="button" id="import-btn">Import progress</button>
+      <input type="file" id="import-file" accept="application/json,.json" class="visually-hidden" aria-label="Import progress file">
+      <button type="button" id="reset-btn" class="danger">Reset progress</button>
+    </div>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-facts" id="roadmap-facts"></p>
+    <div class="phases" id="phases"></div>
+    <ul class="warnings" id="warnings"></ul>
+  </section>
+
+  <section class="list-section" aria-label="Trophy checklist">
+    <h2 id="list-heading">Checklist</h2>
+    <ol class="trophy-list" id="trophy-list"></ol>
+    <p class="empty" id="empty-state" hidden>No trophies match these filters. <button type="button" id="clear-filters">Clear filters</button></p>
+  </section>
+
+  <section class="about" aria-label="About this guide">
+    <h2>About the data</h2>
+    <p>Names, descriptions and grades come from the official PlayStation 5 list as published by PSNProfiles and Exophase, cross-checked against the guides below. Rockstar and Sony had not published the list officially as of 20 November 2026, so some details may still be refined. Five trophies (<i>In The Beginning&hellip;</i>, <i>Capital Offense</i>, <i>Bad Luck, I Guess</i>, <i>The Truth Is Out There</i>, <i>Ten Pin</i>) have no verified unlock method yet — their entries admit that instead of guessing. <i>Fair Game</i>&rsquo;s exact animal is still being confirmed. Every guide here is written in our own words; the sources beside each one are where its facts come from.</p>
+    <h3>Sources</h3>
+    <ul class="sources" id="sources"></ul>
+    <p class="offline-note">This guide is a static page. It works with the network off and keeps your progress only in this browser (localStorage). The source links above open only if you follow them.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Atlas — an unofficial fan guide. Not affiliated with Rockstar Games, Sony or PlayStation. No official artwork or logos are used.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
